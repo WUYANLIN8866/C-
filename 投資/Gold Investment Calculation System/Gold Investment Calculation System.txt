@@ -1,0 +1,24 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	system("COLOR A");
+	system("title Gold Investment Calculation System");
+	while(1)
+	{
+	printf("請輸入投資金額:");int allmoney;scanf("%d",&allmoney);
+	printf("請輸入黃金期望買價:");int hopeprice;scanf("%d",&hopeprice);
+	printf("請輸入黃金跌幅:");int downprice;scanf("%d",&downprice);
+	printf("請輸入(克/單位):");int g;scanf("%d",&g);
+	int buynum;buynum = allmoney/(hopeprice*g);
+	printf("投資金額:%d  黃金期望買價:%d  可進場次數:%d\n",allmoney,hopeprice,buynum);
+	int i;printf("\n");
+	for(i=0;i<buynum;i++)
+	{
+	printf("第%2d單買進價: %d  ~  %d",i+1,hopeprice+(buynum/2-i)*downprice,hopeprice+(buynum/2-i)*downprice-downprice+1);
+	}printf("\n\n");
+	}
+	
+	return 0;
+}

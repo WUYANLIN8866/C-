@@ -1,0 +1,85 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int a[99];
+int i,o,k,k1,j,p;
+int y,y1;
+void search();
+void max();
+void min();
+
+int main(int argc, char** argv) {
+	k=0;
+	printf("請連續輸入數字陣列大小:");scanf("%d",&p);
+	for(i=1;i<p+1;i++)
+	{
+		printf("請輸入第%d個數字:",i);scanf("%d",&a[i]);printf("\n");
+	}
+	printf("data:\n");
+	for(i=1;i<p+1;i++)
+	{
+		printf("data[%d]:%d\n",i,a[i]);
+	}
+	while(1)
+	{
+		printf("1:搜尋特定數字\n");
+		printf("2:搜尋最大值\n");
+		printf("3:搜尋最小值\n");
+		printf("請輸入選項:");
+		scanf("%d",&k1);if(k1==4){break;}
+		switch(k1)
+		{
+			case 1:search();break;
+			case 2:max();break;
+			case 3:min();break;
+		}
+	}
+
+	return 0;
+}
+void search(){
+	printf("請輸入搜尋的數字:");
+	scanf("%d",&o);
+	printf("\n");
+	for(i=1;i<p+1;i++)
+	{
+		if(o==a[i])
+		{
+			printf("%d是第%d個數字\n",o,i);k++;
+		}
+	}
+	if(k==0){printf("查無此數\n",o,i);}}
+void min()
+{ 
+	for(i=1;i<p+1;i++) 
+	{ 
+		for(j=1;j<=p+1;j++) 
+		{ 
+			if(a[i] > a[j]) 
+			{ 
+			y=a[i]; 
+			a[i]=a[i+1]; 
+			a[i+1]=y; 
+			} 
+		} 
+	}
+printf("最小值:%d\n",a[p+1]); 
+}
+void max()
+{ 
+	for(i=1;i<p+1;i++) 
+	{ 
+		for(j=1;j<p+1;j++) 
+		{ 
+			if(a[i] > a[j]) 
+			{ 
+			y1=a[j]; 
+			a[j]=a[j-1]; 
+			a[j-1]=y1; 
+			} 
+		} 
+	}
+printf("最大值:%d\n",a[p]); 
+}
+

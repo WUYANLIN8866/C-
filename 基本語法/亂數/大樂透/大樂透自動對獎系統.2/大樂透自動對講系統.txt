@@ -1,0 +1,26 @@
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	system("color a");system("title 大樂透自動兌獎");
+	int a[49];int a1[49];int c[21];int c1[8];
+	int min =1,max = 49;int max1 = 49;
+	int i,ch,p;int ch1,p1;
+	int h;h=0;int h1;h1=0;int h2;h2=0;
+	int maxdim=49;int maxdim1=49;
+	for(i=0;i<49;i++){a[i]=i+1;}
+	for(i=0;i<49;i++){a1[i]=i+1;}srand((unsigned)time(NULL));
+	
+	for(i=0;i<7;i++){ch = rand()%maxdim;c[i] = a[ch];a[ch]=a[maxdim-1];maxdim--;}printf("號碼1:");for(i=0;i<6;i++){printf("%2d ",c[i]);}
+	for(i=7;i<14;i++){ch = rand()%maxdim;c[i] = a[ch];a[ch]=a[maxdim-1];maxdim--;}printf("\n號碼2:");for(i=7;i<13;i++){printf("%2d ",c[i]);}
+	for(i=14;i<21;i++){ch = rand()%maxdim;c[i] = a[ch];a[ch]=a[maxdim-1];maxdim--;}printf("\n號碼3:");for(i=14;i<20;i++){printf("%2d ",c[i]);}
+	for(i=0;i<7;i++){ch1 = rand()%maxdim;c1[i] = a1[ch1];a1[ch1]=a1[maxdim1-1];maxdim1--;}printf("\n\n中獎號碼:");for(i=0;i<6;i++){printf("%d ",c1[i]);}printf("\n特別號碼為:%d\n",c1[6]);
+	for(i=0;i<7;i++){for(p=0;p<7;p++){if(c1[i]==c[p]){h++;}}}printf("\n號碼1中了%d個號碼\n",h);
+	for(i=0;i<7;i++){for(p=7;p<14;p++){if(c1[i]==c[p]){h1++;}}}printf("\n號碼2中了%d個號碼\n",h1);
+	for(i=0;i<7;i++){for(p=14;p<21;p++){if(c1[i]==c[p]){h2++;}}}printf("\n號碼3中了%d個號碼\n\n",h2);
+	system("pause");
+	return 0;
+}

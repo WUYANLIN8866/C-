@@ -1,0 +1,65 @@
+#include "stdafx.h"
+#include <iostream>
+#include<stdlib.h>
+#include<string.h>
+using namespace std;
+int main(int argc, char** argv) {
+	system("color a");
+	int p, w, i, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10;
+	int  yn;
+	i = i1 = i2 = i3 = i4 = i5 = i6 = i7 = i8 = i9 = i10 = 0;
+	printf("資網1A   D1064181004   吳彥霖\n");
+	system("title 高級菜市場");
+	printf("\t商品名稱\t價格(美金)\n");
+	printf("\t1.金箔\t\t350000/公斤\n");
+	printf("\t2.白松露  \t3000/公斤\n");
+	printf("\t3.松茸\t\t1000/公斤\n");
+	printf("\t4.番紅花  \t7800/公斤\n");
+	printf("\t5.黑鮪魚  \t590/公斤\n");
+	printf("\t6.神戶牛肉\t200/公斤\n");
+	printf("\t7.大紅袍茶\t1000000/公斤\n");
+	printf("\t8.皇家007披薩\t4200/公斤\n");
+	printf("\t9.安拉越南河粉湯5800/公斤\n");
+	printf("\t10.黃金魚子醬\t305000/公斤\n\n\n");
+	printf("請問輸入購買商品種類:"); cin >> w;
+	while (w>0)
+	{
+		printf("請問輸入購買商品代號:"); cin >> p;
+		switch (p)
+		{
+		case 1:printf("請問輸入金箔購買公斤量:"); cin >> i1; i = 350000 * i1 + i; break;
+		case 2:printf("請問輸入白松露購買公斤量:"); cin >> i2; i = 3000 * i2 + i; break;
+		case 3:printf("請問輸入松茸購買公斤量:"); cin >> i3; i = 1000 * i3 + i; break;
+		case 4:printf("請問輸入番紅花購買公斤量:"); cin >> i4; i = 7800 * i4 + i; break;
+		case 5:printf("請問輸入黑鮪魚購買公斤量:"); cin >> i5; i = 590 * i5 + i; break;
+		case 6:printf("請問輸入神戶牛肉購買公斤量:"); cin >> i6; i = 200 * i6 + i; break;
+		case 7:printf("請問輸入大紅袍茶購買公斤量:"); cin >> i7; i = 1000000 * i7 + i; break;
+		case 8:printf("請問輸入皇家007披薩購買公斤量:"); cin >> i8; i = 4200 * i8 + i; break;
+		case 9:printf("請問輸入安拉越南河粉湯購買公斤量:"); cin >> i9; i = 5800 * i9 + i; break;
+		case 10:printf("請問輸入黃金魚子醬購買公斤量:"); cin >> i10; i = 305000 * i10 + i; break;
+		}w--;
+	}
+	printf("\n\n===============================================\n");
+	printf("\t購買商品  單價金額  單價公斤    總金額\n");
+	if (i1>0) { printf("\t金箔\t   350000\t%d  \t%d\n", i1, i1 * 350000); }
+	if (i2>0) { printf("\t白松露\t    3000\t%d\t%d\n", i2, i2 * 3000); }
+	if (i3>0) { printf("\t松茸\t    1000\t%d\t%d\n", i3, i3 * 1000); }
+	if (i4>0) { printf("\t番紅花\t    7800\t%d\t%d\n", i4, i4 * 7800); }
+	if (i5>0) { printf("\t黑鮪魚\t    590\t\t%d\t%d\n", i5, i5 * 590); }
+	if (i6>0) { printf("\t神戶牛肉    200\t\t%d\t%d\n", i6, i6 * 200); }
+	if (i7>0) { printf("\t大紅袍茶  1000000\t%d   \t%d\n", i7, i7 * 1000000); }
+	if (i8>0) { printf("      皇家007披薩   4200\t%d\t%d\n", i8, i8 * 4200); }
+	if (i9>0) { printf("    安拉越南河粉湯 350000  \t%d  \t%d\n", i9, i9 * 5800); }
+	if (i10>0) { printf("      黃金魚子醬   305000\t%d  \t%d\n", i10, i10 * 305000); }
+
+	printf("\t合計\t\t\t\t%d美金 \n\t\t= %d  NT\n", i, i * 30);
+	printf("\n\n===============================================\n");
+	printf("支付款額:"); int r; cin >> r;
+	if (r<i * 30) { printf("款額不足"); }
+	else {
+		printf("總價:%d    支付金額:%d", i * 30, r); int q, q1, q2, q3, q4; q = (r - i * 30) / 1000; q1 = (r - i * 30 - q * 1000) / 500; q2 = (r - i * 30 - q * 1000 - q1 * 500) / 100; q3 = (r - i * 30 - q * 1000 - q1 * 500 - q2 * 100) / 50; q4 = (r - i * 30 - q * 1000 - q1 * 500 - q2 * 100 - q3 * 50) / 10;
+		printf("\t找零:%d\n1000元:%d張\t500元:%d張\t100元:%d張\n50:%d\n10:%d\n", r - i * 30, q, q1, q2, q3, q4);
+	}
+	system("pause");
+	return 0;
+}

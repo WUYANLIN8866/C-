@@ -1,0 +1,45 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int a[4][4];int i,j,u,r,fq,M;char name[4][10]={"aaa","bbb","ccc","ddd"};char b[4][10]={"國文","英文","數學"};
+void case1(){for(i=0;i<4;i++){printf("請輸入第%d位學生姓名:",i+1);scanf("%s",&name[i]);for(j=0;j<3;j++){printf("請輸入第%s成績:",b[j]);scanf("%d",&a[i][j]);}printf("\n");}}
+void case2(){printf("請輸入更改座號:");int chn;scanf("%d",&chn);for(j=0;j<3;j++){printf("請輸入第%s成績:",b[j]);scanf("%d",&a[chn-1][j]);}}
+void case3(){printf("請輸入學生座號:");int i;scanf("%d",&i);printf("學號\t姓名\t國文\t英文\t數學\n");printf("%d\t%s\t",i,name[i-1]);for(j=0;j<3;j++){printf("%d\t",a[i-1][j]);}printf("\n\n");}
+void case4(){printf("請輸入編號(1:國文  2:英文  3:數學):");scanf("%d",&r);if(r==1){for(j=0;j<4;j++){int d[4]={a[0][0],a[1][0],a[2][0],a[3][0]};for(i=0;i<4;i++){if(d[i]<d[i+1]){fq = d[i];d[i] = d[i+1];d[i+1] = fq;if(d[i+1]<d[i+2]){fq = d[i+1];d[i+1] = d[i+2];d[i+2] = fq;if(d[i+2]<d[i+3]){fq = d[i+2];d[i+2] = d[i+3];d[i+3] = fq;if(d[i]<d[i+1]){fq = d[i];d[i] = d[i+1];d[i+1] = fq;}else if(d[i]<d[i+2]){fq = d[i];d[i] = d[i+2];d[i+2] = fq;if(d[i+1]<d[i+2]){fq = d[i+1];d[i+1] = d[i+2];d[i+2] = fq;}}}}else{}}else{}}printf("國文第%d名:%d\n",j+1,d[j]);}}if(r==2){for(j=0;j<4;j++){int d[4]={a[0][1],a[1][1],a[2][1],a[3][1]};for(i=0;i<4;i++){if(d[i]<d[i+1]){fq = d[i];d[i] = d[i+1];d[i+1] = fq;if(d[i+1]<d[i+2]){fq = d[i+1];d[i+1] = d[i+2];d[i+2] = fq;if(d[i+2]<d[i+3]){fq = d[i+2];d[i+2] = d[i+3];d[i+3] = fq;if(d[i]<d[i+1]){fq = d[i];d[i] = d[i+1];d[i+1] = fq;}else if(d[i]<d[i+2]){fq = d[i];d[i] = d[i+2];d[i+2] = fq;if(d[i+1]<d[i+2]){fq = d[i+1];d[i+1] = d[i+2];d[i+2] = fq;}}}}else{}}else{}}printf("英文第%d名:%d\n",j+1,d[j]);}}if(r==3){for(j=0;j<4;j++){int d[4]={a[0][2],a[1][2],a[2][2],a[3][2]};for(i=0;i<4;i++){if(d[i]<d[i+1]){fq = d[i];d[i] = d[i+1];d[i+1] = fq;if(d[i+1]<d[i+2]){fq = d[i+1];d[i+1] = d[i+2];d[i+2] = fq;if(d[i+2]<d[i+3]){fq = d[i+2];d[i+2] = d[i+3];d[i+3] = fq;if(d[i]<d[i+1]){fq = d[i];d[i] = d[i+1];d[i+1] = fq;}else if(d[i]<d[i+2]){fq = d[i];d[i] = d[i+2];d[i+2] = fq;if(d[i+1]<d[i+2]){fq = d[i+1];d[i+1] = d[i+2];d[i+2] = fq;}}}}else{}}else{}}printf("數學第%d名:%d\n",j+1,d[j]);}}}
+void case5(){printf("學號\t姓名\t國文\t英文\t數學\n");for(i=0;i<4;i++){printf("000%d\t%s\t",i+1,name[i]);for(j=0;j<3;j++){printf("%d\t",a[i][j]);}printf("\n\n");}}
+void case6(){int e,e1,e2,e3;e=(a[0][0]+a[0][1]+a[0][2])/3;e1=(a[1][0]+a[1][1]+a[1][2])/3;e2=(a[2][0]+a[2][1]+a[2][2])/3;e3=(a[3][0]+a[3][1]+a[3][2])/3;printf("學號\t姓名\t平均\n");for(i=1;i<5;i++){if(i==1){printf("%d\t%s\t%d\n",i,name[i-1],e);}else if(i==2){printf("%d\t%s\t%d\n",i,name[i-1],e1);}else if(i==3){printf("%d\t%s\t%d\n",i,name[i-1],e2);}else{printf("%d\t%s\t%d\n",i,name[i-1],e3);}}}
+void case7(){int te,e,e1,e2,e3;e=(a[0][0]+a[0][1]+a[0][2])/3;e1=(a[1][0]+a[1][1]+a[1][2])/3;e2=(a[2][0]+a[2][1]+a[2][2])/3;e3=(a[3][0]+a[3][1]+a[3][2])/3;te = (e+e1+e2+e3)/4;printf("全班平均分數為:%d\n\n",te);}
+void case8(){for(i=0;i<1;i++){int d[4]={a[0][0],a[1][0],a[2][0],a[3][0]};if((d[0])>(d[1])&&(d[2])&&(d[3])){printf("國文成績最高分:%s\n\n",name[0]);}else if((d[1])>(d[2])&&(d[3])&&(d[0])){printf("國文成績最高分:%s\n\n",name[1]);}else if((d[2])>(d[1])&&(d[3])&&(d[0])){printf("國文成績最高分:%s\n\n",name[2]);}else if((d[3])>(d[1])&&(d[2])&&(d[0])){printf("國文成績最高分:%s\n\n",name[3]);}}for(i=0;i<1;i++){int d[4]={a[0][1],a[1][1],a[2][1],a[3][1]};if((d[0])>(d[1])&&(d[2])&&(d[3])){printf("英文成績最高分:%s\n\n",name[0]);}else if((d[3])>(d[1])&&(d[2])&&(d[0])){printf("英文成績最高分:%s\n\n",name[3]);}else if((d[1])>(d[2])&&(d[3])&&(d[0])){printf("英文成績最高分:%s\n\n",name[1]);}else if((d[2])>(d[1])&&(d[3])&&(d[0])){printf("英文成績最高分:%s\n\n",name[2]);}}for(i=0;i<1;i++){int d[4]={a[0][2],a[1][2],a[2][2],a[3][2]};if((d[0])>(d[1])&&(d[2])&&(d[3])){printf("數學成績最高分:%s\n\n",name[0]);}else if((d[3])>(d[1])&&(d[2])&&(d[0])){printf("數學成績最高分:%s\n\n",name[3]);}else if((d[1])>(d[2])&&(d[3])&&(d[0])){printf("數學成績最高分:%s\n\n",name[1]);}else if((d[2])>(d[1])&&(d[3])&&(d[0])){printf("數學成績最高分:%s\n\n",name[2]);}}}
+int main(int argc, char** argv) {
+	for(i=0;i<4;i++){for(j=0;j<3;j++){a[i][j]=0;}}
+	while(1){
+	printf("成績資料維護系統\n");
+	printf("1:建立學生全部資料\n");
+	printf("2:修改特定學生資料\n");
+	printf("3:查詢學生資料\n");
+	printf("4:特定科目成績排行\n");
+	printf("5:輸出所有資料\n");
+	printf("6:顯示學生平均成績\n");
+	printf("7:顯示全班平均成績\n");
+	printf("8:顯示各科成績最高的學生\n");
+	printf("9:離開\n");
+	printf("請輸入選項:");
+	scanf("%d",&u);printf("\n");
+	switch(u)
+	{
+		case 1:case1();break;
+		case 2:case2();break;		
+		case 3:case3();break;	
+		case 4:case4();break;		
+		case 5:case5();break;		
+		case 6:case6();break;		
+		case 7:case7();break;		
+		case 8:case8();break;		
+		case 9:printf("離開程式");return 0;break;
+		default:printf("Errow");
+	}
+	}
+	return 0;
+}

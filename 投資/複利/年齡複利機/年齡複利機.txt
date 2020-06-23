@@ -1,0 +1,41 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) 
+{
+	system("color a");
+	system("title 年齡複利機");
+	int x;
+	int i;
+	float s;
+	int m;
+	int y,year;
+	int t;
+	int q;
+	int u;
+	for(u=1;u<999;u++)
+	{
+		printf("=========================\n");
+		printf("請輸入年齡:");
+		scanf("%d",&year);
+		printf("請輸入初始存款:");
+		scanf("%d",&x);
+		printf("請輸入年報酬率:");
+		scanf("%f",&s);
+		printf("請輸入月存:");
+		scanf("%d",&m);
+		printf("請輸入年份:");
+		scanf("%d",&y);
+		printf("\n");
+		for(i=1;i<y+1;i++)
+		{
+			t = (1+s)*x+12*m;
+			printf("%d歲時總存款值:%d",year+i,t);
+			printf("\n");
+			x = t;
+		}
+		printf("=========================\n");
+	} 
+	return 0;
+}

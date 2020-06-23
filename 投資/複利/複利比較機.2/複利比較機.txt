@@ -1,0 +1,107 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+	
+	int x,a,x1,x2,x3,x4;
+	int i;
+	float s0,s1,s2,s3,s4;
+	int m;
+	int y;
+	int t,t1,t2,t3,t4;
+	int q;
+	int u;
+	void case1(){};
+	void case2()
+		{
+		printf("請輸入年報酬率1:");scanf("%f",&s0);printf("請輸入年報酬率2:");scanf("%f",&s1);
+		int p,p1;
+		p=s0*100;p1=s1*100;
+		printf("\t\t%2d%\t  %2d%\n",p,p1);
+		for(i=1;i<y+1;i++)
+		{
+			t = (1+s0)*x+12*m;  t1 = (1+s1)*x1+12*m;
+			printf("第%2d年總存款值:%d\t%d",i,t,t1);
+			printf("\n");
+			x = t;x1 = t1;
+		}
+		printf("=========================\n");
+		}
+	void case3()
+		{
+		printf("請輸入年報酬率1:");scanf("%f",&s0);printf("請輸入年報酬率2:");scanf("%f",&s1);printf("請輸入年報酬率3:");scanf("%f",&s2);
+		int p,p1,p2;
+		p=s0*100;
+		p1=s1*100;
+		p2=s2*100;
+		printf("\t\t%2d%\t  %2d%\t  %2d%\n",p,p1,p2);
+		for(i=1;i<y+1;i++)
+		{
+			t = (1+s0)*x+12*m;  
+			t1 = (1+s1)*x1+12*m;  
+			t2 = (1+s2)*x2+12*m;
+			printf("第%2d年總存款值:%d\t%d\t%d",i,t,t1,t2);
+			printf("\n");
+			x = t;x1 = t1;x2 = t2;
+		}
+		printf("=========================\n");
+		}
+		void case4()
+		{
+		printf("請輸入年報酬率1:");scanf("%f",&s0);printf("請輸入年報酬率2:");scanf("%f",&s1);printf("請輸入年報酬率3:");scanf("%f",&s2);printf("請輸入年報酬率4:");scanf("%f",&s3);
+		int p,p1,p2,p3;
+		p=s0*100;p1=s1*100;p2=s2*100;p3=s3*100;
+		printf("\t\t%2d%\t  %2d%\t  %2d%\t  %2d%\n",p,p1,p2,p3);
+		for(i=1;i<y+1;i++)
+		{
+			t = (1+s0)*x+12*m;  t1 = (1+s1)*x1+12*m;  t2 = (1+s2)*x2+12*m;   t3 = (1+s3)*x3+12*m;
+			printf("第%2d年總存款值:%d\t%d\t%d\t%d",i,t,t1,t2,t3);
+			printf("\n");
+			x = t;x1 = t1;x2 = t2;x3 = t3;
+		}
+		printf("=========================\n");
+		}
+		void case5()
+		{
+		printf("請輸入年報酬率1:");scanf("%f",&s0);printf("請輸入年報酬率2:");scanf("%f",&s1);printf("請輸入年報酬率3:");scanf("%f",&s2);printf("請輸入年報酬率4:");scanf("%f",&s3);printf("請輸入年報酬率5:");scanf("%f",&s4);
+		int p,p1,p2,p3,p4;
+		p=s0*100;p1=s1*100;p2=s2*100;p3=s3*100;p4=s4*100;
+		printf("\t\t%2d%\t  %2d%\t  %2d%\t  %2d%\t  %2d%\n",p,p1,p2,p3,p4);
+		for(i=1;i<y+1;i++)
+		{
+			t = (1+s0)*x+12*m;  t1 = (1+s1)*x1+12*m;  t2 = (1+s2)*x2+12*m;   t3 = (1+s3)*x3+12*m;   t4 = (1+s4)*x4+12*m;
+			printf("第%2d年總存款值:%d\t%d\t%d\t%d\t%d",i,t,t1,t2,t3,t4);
+			printf("\n");
+			x = t;x1 = t1;x2 = t2;x3 = t3;x4 = t4;
+		}
+		printf("=========================\n");
+		}
+int main(int argc, char** argv) 
+{
+	system("color a");
+	system("title 複利比較機");
+	
+	while(1)
+	{
+		printf("=========================\n");
+		printf("請輸入初始存款:");
+		scanf("%d",&x);x1=x;x2=x;x3=x;x4=x;
+		printf("請輸入月存:");
+		scanf("%d",&m);
+		printf("請輸入年份:");
+		scanf("%d",&y);
+		printf("請輸入比較數量(最多5筆):");scanf("%d",&a);
+		switch(a)
+		{
+			case 1:case1();break;
+			case 2:case2();break;		
+			case 3:case3();break;	
+			case 4:case4();break;
+			case 5:case5();break;
+			default:printf("Errow");
+		}
+		printf("\n");
+		
+		
+	}
+	return 0;
+}

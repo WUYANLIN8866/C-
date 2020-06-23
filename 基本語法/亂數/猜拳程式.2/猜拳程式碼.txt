@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main() {
+srand((int) time(0));
+int Com;
+int You;
+int a;
+int comwin;
+int youwin;
+int nobodywin;
+
+while( a < 3 ) 
+{
+    Com = (int)(3.0 * rand()/(RAND_MAX +1.0));
+    printf("剪刀,石頭,布三戰兩勝  (平手算你輸)\n");
+    printf("請輸入你的選項(0:剪刀,1:石頭,2:布):");
+    scanf("%d",&You);
+    printf("你輸入的是:%d\n",You);
+    printf("電腦輸入的是:%d\n",Com);
+
+    if( You >= 3 ) 
+	{
+        printf("請輸入0-2的數字\n");
+        continue;
+    }
+    if( You == Com ) 
+	{
+        printf("平手\n");
+        nobodywin++;
+        a++;
+    }
+    else if( (Com == 0 && You ==2) || (Com == 1 && You ==0) || (Com == 2 && You ==1) ) 
+	{
+        printf("電腦贏\n");
+        comwin++;
+        a++;
+    }
+    else 
+	{
+        printf("你贏\n");
+        youwin++;
+        a++;
+    }
+    printf("=====================================\n");
+
+}
+    if (youwin>comwin)
+    {
+    	printf("三戰兩勝你贏了\n");
+    	system("pause");
+	}
+	else
+	  
+		printf("三戰兩勝你輸了\n");
+		system("pause");
+}

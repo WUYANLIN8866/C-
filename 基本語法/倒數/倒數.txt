@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	system("title 倒數(延遲時間)");
+	int i,j,i1,j2,j1,i2,i3,j3,i4,j4;
+	printf("請輸入年數:");scanf("%d",&j4);
+	printf("請輸入天數:");scanf("%d",&j3);
+	printf("請輸入小時數:");scanf("%d",&j2);
+	printf("請輸入分鐘數:");scanf("%d",&j1);
+	printf("請輸入秒數:");scanf("%d",&j);
+	for(i4=j4;i4>=0;i4--)
+	{
+	for(i3=j3;i3>=0;i3--)
+	{
+	for(i2=j2;i2>=0;i2--)
+	{ 
+	for(i1=j1;i1>=0;i1--)
+	{ 
+	for(i=j;i>=0;i--)
+	{
+		_sleep(1000);
+		printf("剩下%2d年%2d天%2d小時%2d分鐘%2d秒鐘\n",i4,i3,i2,i1,i);
+	}
+	j=59;
+	}
+	j1=59;
+	}
+	j2=23;
+	}
+	j3=364;
+	}
+	return 0;
+} 
+

@@ -1,0 +1,42 @@
+#include <iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int nowmoney,remoney,a,y,rey,a1,x,m,y1,i,t;float c,s;char yn[4];
+void noinvest()
+{
+	a1=rey-y;a=(90-rey)*remoney-nowmoney;
+	printf("\n不投資情況下:");
+	printf("%d年需要存%d元\n",a1,a);
+	printf("平均每年需要存%d元\t",a/a1/10000*10000);
+	printf("平均每月需要存%d元\n\n",a/a1/12/1000*1000);
+}
+void invest()
+{
+	printf("請輸入退休報酬率:");scanf("%f",&c);
+	printf("請輸入未退休報酬率:");scanf("%f",&s);
+	printf("請輸入未退休月存:");scanf("%d",&m);
+	printf("請輸入未退休投資年份:");scanf("%d",&y1);
+	printf("\n");
+	for(i=1;i<y1+1;i++)
+			{
+				t = (1+s)*nowmoney+12*m;
+				printf("%d歲總存款值:%d",y+i,t);
+				printf("\n");
+				nowmoney = t;
+				if(nowmoney>remoney/c){printf("%d歲已達退休標準",y+i);break;}
+			}
+}
+int main(int argc, char** argv) {
+	system("title 退休金計算機");
+	while(1)
+	{
+		printf("請輸入目前年齡:");scanf("%d",&y);
+		printf("請輸入目前存款:");scanf("%d",&nowmoney);
+		printf("請輸入退休年齡:");scanf("%d",&rey);
+		printf("請輸入退休每年花費:");scanf("%d",&remoney);
+		printf("請問是否投資:");scanf("%s",&yn);if (strcmp(yn,"是")==0){invest();}else if(strcmp(yn,"否")==0){noinvest();}
+	}
+	return 0;
+}

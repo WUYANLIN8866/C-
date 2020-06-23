@@ -1,0 +1,39 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {int r,g,h,i,j,k;
+	system("title 發票登入自動對獎系統");
+	printf("請輸入發票張數:");scanf("%d",&g);
+	int a[100]={
+	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	};
+	for(i=0;i<g;i++)
+	{
+		printf("請輸入發票末三碼:");
+		scanf("%d",&j);
+		a[i]=j;
+	}
+	for(i=0;i<g;i=i+3)
+	{
+		printf("已登入號碼:%d\t已登入號碼:%d\t已登入號碼:%d\n",a[i],a[i+1],a[i+2]);
+	}
+	for(r=0;r<99;r++)
+	{
+		printf("請輸入中獎發票:");
+		scanf("%d",&k);
+		for(i=0;i<g;i++)
+		{
+			if(a[i]==k)
+			{
+				printf("恭喜中獎\n\n");
+			}
+		}
+	}
+	system("pause");
+	return 0;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	system("title 發票對號機");
+	printf("請輸入特別獎號碼:");int a;scanf("%d",&a);
+	printf("請輸入特別獎末3碼:");int a1;scanf("%d",&a1);
+	printf("請輸入特獎號碼:");int b;scanf("%d",&b);
+	printf("請輸入特獎末3碼:");int b1;scanf("%d",&b1);
+	printf("請輸入頭獎1號碼:");int c;scanf("%d",&c);
+	printf("請輸入頭獎1末3碼:");int c1;scanf("%d",&c1);
+	printf("請輸入頭獎2號碼:");int d;scanf("%d",&d);
+	printf("請輸入頭獎2末3碼:");int d1;scanf("%d",&d1);
+	printf("請輸入頭獎3號碼:");int e;scanf("%d",&e);
+	printf("請輸入頭獎3末3碼:");int e1;scanf("%d",&e1);
+	printf("請輸入6獎末3碼:");int f;scanf("%d",&f);
+	printf("請輸入6獎末3碼:");int g;scanf("%d",&g);
+	printf("請輸入6獎末3碼:");int h;scanf("%d",&h);int i;
+	for(i=1;i<99999999999999999999999999999999999999999;i++)
+	{
+		printf("請輸入發票末三碼:");int p;scanf("%d",&p);
+		printf("\n");
+	if(p==a1){printf("您的號碼與特別獎末三碼相同   (特別獎:%d)\n\n",a);}
+	else if(p==b1){printf("您的號碼與特獎末三碼相同   (特獎:%d)\n\n",b);}
+	else if(p==c1){printf("您的號碼與頭獎末三碼相同   (頭獎:%d)\n\n",c);}
+	else if(p==d1){printf("您的號碼與頭獎末三碼相同   (頭獎:%d)\n\n",d);}
+	else if(p==e1){printf("您的號碼與頭獎末三碼相同   (頭獎:%d)\n\n",e);}
+	else if(p==f){printf("您的號碼與6獎號碼相同   (頭獎:%d)\n\n",f);}
+	else if(p==g){printf("您的號碼與6獎號碼相同   (頭獎:%d)\n\n",g);}
+	else if(p==h){printf("您的號碼與6獎號碼相同   (頭獎:%d)\n\n",h);}
+	else{printf("號碼無效\n\n");}
+	}
+	return 0;
+}
