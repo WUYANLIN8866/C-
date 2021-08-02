@@ -3,34 +3,28 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char** argv) {int r,g,h,i,j,k;
-	system("title µo²¼µn¤J¦Û°Ê¹ï¼ú¨t²Î");
-	printf("½Ğ¿é¤Jµo²¼±i¼Æ:");scanf("%d",&g);
-	int a[100]={
-	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-	};
+	system("title ç™¼ç¥¨ç™»å…¥è‡ªå‹•å°çç³»çµ±");
+	printf("è«‹è¼¸å…¥ç™¼ç¥¨å¼µæ•¸:");scanf("%d",&g);
+	int a[100]={0,0,0};
 	for(i=0;i<g;i++)
 	{
-		printf("½Ğ¿é¤Jµo²¼¥½¤T½X:");
+		printf("è«‹è¼¸å…¥ä¸­çç™¼ç¥¨æœ«ä¸‰ç¢¼:");
 		scanf("%d",&j);
 		a[i]=j;
 	}
 	for(i=0;i<g;i=i+3)
 	{
-		printf("¤wµn¤J¸¹½X:%d\t¤wµn¤J¸¹½X:%d\t¤wµn¤J¸¹½X:%d\n",a[i],a[i+1],a[i+2]);
+		printf("å·²ç™»å…¥è™Ÿç¢¼:%d\tå·²ç™»å…¥è™Ÿç¢¼:%d\tå·²ç™»å…¥è™Ÿç¢¼:%d\n",a[i],a[i+1],a[i+2]);
 	}
 	for(r=0;r<99;r++)
 	{
-		printf("½Ğ¿é¤J¤¤¼úµo²¼:");
+		printf("è«‹è¼¸å…¥ç™¼ç¥¨æœ«ä¸‰ç¢¼:");
 		scanf("%d",&k);
 		for(i=0;i<g;i++)
 		{
 			if(a[i]==k)
 			{
-				printf("®¥³ß¤¤¼ú\n\n");
+				printf("æ­å–œä¸­ç\n\n");
 			}
 		}
 	}
